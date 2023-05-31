@@ -10,15 +10,23 @@
     width: 0;
 }
 
+:root {
+    --primary: rgb(255, 0, 0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Nunito", "Quicksand", sans-serif !important;
     font-weight: 300;
     line-height: 1.7;
     background-color: #f5f5f5;
     overflow-x: hidden;
-    min-height: 1000vh;
 }
 
+/* Header */
 header nav {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -49,7 +57,7 @@ header nav .nav-container .nav-title a {
 }
 
 header nav .nav-container .nav-title a h1 span:nth-child(2) {
-    color: rgb(255, 0, 0);
+    color: var(--primary);
 }
 
 header nav .nav-container .nav-list {
@@ -76,17 +84,168 @@ header nav .nav-container .nav-list li a {
 }
 
 header nav .nav-container .nav-list li a:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--primary);
     color: #fff;
 }
 
 header nav .nav-container .nav-list li .nav-list-login {
-    background-color: rgb(255, 0, 0) !important;
+    background-color: var(--primary) !important;
     color: #fff !important;
 }
 
 header nav .nav-container .nav-list li .nav-list-login:hover {
     background-color: transparent !important;
-    color: rgb(255, 0, 0) !important;
-    border-color: rgb(255, 0, 0) !important;
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+header .jumbotron {
+    /* background-image: url(../img/bg.jpg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* End Header */
+
+/* Article */
+main #content article {
+    padding: 70px;
+}
+/* End Article */
+
+/* Service */
+main #content .service .service-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main #content .service .service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+main #content .service .service-container .service-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: stretch;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+main #content .service .service-container .service-card:hover {
+    transform: scale(1.05);
+}
+
+main #content .service .service-container .service-card .service-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+main #content .service .service-container .service-card h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main #content .service .service-container .service-card p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+}
+/* End Service */
+
+/* Pricing */
+main #content .pricing .pricing-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main #content .pricing .pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+main #content .pricing .pricing-container .pricing-card {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: stretch;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+main #content .pricing .pricing-container .pricing-card:hover {
+    transform: scale(1.05);
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-price {
+    margin: 1rem 0;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-list ul li {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-button {
+    /* create button */
+    width: 50%;
+    display: block;
+    padding: 4px 15px;
+    border-radius: 500px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-button a {
+    text-decoration: none;
+    color: #fff;
+}
+/* End Pricing */
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    main #content article {
+        padding: 70px 1rem;
+    }
 }
