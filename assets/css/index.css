@@ -10,6 +10,20 @@
     box-sizing: border-box !important;
 }
 
+.fas.fa-check {
+    background-color: green !important;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.fas.fa-times {
+    background-color: red !important;
+    color: #fff;
+    padding: 4px 6.5px;
+    border-radius: 5px;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -292,7 +306,7 @@ main #content .pricing .pricing-container .pricing-card .pricing-label p {
 
 main #content .pricing .pricing-container .pricing-card .pricing-list ul li {
     list-style: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 
@@ -318,7 +332,7 @@ main #content .pricing .pricing-container .pricing-card .pricing-button:hover {
 }
 
 main #content .pricing .pricing-container .pricing-card:nth-child(2) {
-    background-color: rgb(255, 75, 75);
+    background-color: rgb(255, 90, 90);
     color: #fff;
     transform: scale(1.1);
 }
@@ -330,7 +344,7 @@ main
     .pricing-card:nth-child(2)
     .pricing-button {
     background-color: rgb(255, 220, 220);
-    color: rgb(255, 75, 75);
+    color: rgb(255, 90, 90);
     border-color: rgb(255, 220, 220);
 }
 
@@ -340,7 +354,7 @@ main
     .pricing-container
     .pricing-card:nth-child(2)
     .pricing-button:hover {
-    background-color: rgb(255, 75, 75);
+    background-color: rgb(255, 90, 90);
     border-color: #fff;
     color: #fff;
 }
