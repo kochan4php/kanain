@@ -1,5 +1,5 @@
 const navbar = document.querySelector("header nav");
-const navBurger = document.querySelector(".nav-burger");
+const navBurger = document.querySelector(".nav-burger i.fas.fa-bars");
 const navList = document.querySelector(".nav-list");
 
 window.onscroll = function () {
@@ -12,4 +12,10 @@ window.onscroll = function () {
 
 navBurger.addEventListener("click", function () {
     navList.classList.toggle("slide");
+});
+
+window.addEventListener("click", function (e) {
+    if (e.target !== navBurger && e.target !== navList) {
+        navList.classList.remove("slide");
+    }
 });
