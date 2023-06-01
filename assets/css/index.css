@@ -514,8 +514,8 @@ footer p {
     header .container .jumbotron .jumbotron-content button {
         padding: 0.6rem 2rem;
         margin-block-start: 1rem;
-        text-transform: uppercase;
-        font-size: 0.8rem;
+        text-transform: capitalize;
+        font-size: 1rem;
     }
 
     header .container .jumbotron .jumbotron-image img {
@@ -543,18 +543,6 @@ footer p {
     header .container .jumbotron .jumbotron-content h1 {
         font-size: 1.8rem;
         margin-block: 0.4rem;
-    }
-
-    header .container .jumbotron .jumbotron-content p {
-        line-height: 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    header .container .jumbotron .jumbotron-content button {
-        padding: 0.4rem 1.7rem;
-        margin-block-start: 1rem;
-        text-transform: uppercase;
-        font-size: 0.7rem;
     }
 
     header .container .jumbotron .jumbotron-image {
