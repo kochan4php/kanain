@@ -257,13 +257,13 @@ main #content .pricing .pricing-container {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.3rem;
+    gap: 2rem;
 }
 
 main #content .pricing .pricing-container .pricing-card {
     width: 400px;
     min-height: 400px;
-    background-color: #fff;
+    background-color: rgb(255, 220, 220);
     border-radius: 10px;
     padding: 25px;
     display: flex;
@@ -315,6 +315,34 @@ main #content .pricing .pricing-container .pricing-card .pricing-button:hover {
     background-color: #fff;
     color: var(--primary);
     border-color: var(--primary);
+}
+
+main #content .pricing .pricing-container .pricing-card:nth-child(2) {
+    background-color: rgb(255, 75, 75);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+main
+    #content
+    .pricing
+    .pricing-container
+    .pricing-card:nth-child(2)
+    .pricing-button {
+    background-color: rgb(255, 220, 220);
+    color: rgb(255, 75, 75);
+    border-color: rgb(255, 220, 220);
+}
+
+main
+    #content
+    .pricing
+    .pricing-container
+    .pricing-card:nth-child(2)
+    .pricing-button:hover {
+    background-color: rgb(255, 75, 75);
+    border-color: #fff;
+    color: #fff;
 }
 /* End Pricing */
 
@@ -444,6 +472,14 @@ footer p {
         margin: auto;
         min-width: 100%;
         width: 100%;
+    }
+
+    main #content .pricing .pricing-container {
+        gap: 1.3rem;
+    }
+
+    main #content .pricing .pricing-container .pricing-card:nth-child(2) {
+        transform: scale(1);
     }
 }
 
