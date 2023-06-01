@@ -29,12 +29,11 @@ body {
 /* Header */
 header nav {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 999;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 999 !important;
 }
 
 header nav .nav-container {
@@ -42,7 +41,8 @@ header nav .nav-container {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 80px;
+    height: 75px;
+    transition: all 0.2s ease-in-out;
 }
 
 header nav .nav-container .nav-title {
@@ -164,6 +164,10 @@ main #content .service .service-container .service-card h2 {
     text-align: center;
 }
 
+main #content .service .service-container .service-card h2 span {
+    display: block;
+}
+
 main #content .service .service-container .service-card p {
     font-size: 1.1rem;
     font-weight: 300;
@@ -184,11 +188,12 @@ main #content .pricing .pricing-container {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 1.3rem;
 }
 
 main #content .pricing .pricing-container .pricing-card {
     width: 400px;
+    min-height: 400px;
     background-color: #fff;
     border-radius: 10px;
     padding: 25px;
@@ -197,24 +202,23 @@ main #content .pricing .pricing-container .pricing-card {
     align-items: center;
     flex-direction: column;
     align-self: stretch;
+    gap: 1.1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
 }
 
-main #content .pricing .pricing-container .pricing-card:hover {
-    transform: scale(1.05);
+main #content .pricing .pricing-container .pricing-card .pricing-label h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-main #content .pricing .pricing-container .pricing-card .pricing-price {
-    margin: 1rem 0;
-}
-
-main #content .pricing .pricing-container .pricing-card .pricing-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.2rem;
+main #content .pricing .pricing-container .pricing-card .pricing-label p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-align: center;
+    font-weight: 500;
 }
 
 main #content .pricing .pricing-container .pricing-card .pricing-list ul li {
@@ -224,7 +228,6 @@ main #content .pricing .pricing-container .pricing-card .pricing-list ul li {
 }
 
 main #content .pricing .pricing-container .pricing-card .pricing-button {
-    /* create button */
     width: 50%;
     display: block;
     padding: 4px 15px;
@@ -233,19 +236,125 @@ main #content .pricing .pricing-container .pricing-card .pricing-button {
     font-weight: 500;
     background-color: var(--primary);
     transition: all 0.2s ease-in-out;
-    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid transparent;
+    color: #fff;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-button:hover {
+    background-color: #fff;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+/* End Pricing */
+
+/* About */
+main #content .about .about-title {
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
 }
 
-main #content .pricing .pricing-container .pricing-card .pricing-button a {
-    text-decoration: none;
-    color: #fff;
+main #content .about .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    padding: 0 30px;
 }
-/* End Pricing */
+
+main #content .about .about-container .about-content {
+    font-size: 1.2rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 60%;
+}
+
+main #content .about .about-container .about-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+main #content .about .about-container .about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* End About */
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 50px;
+}
+
+footer .footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer .footer-list li {
+    list-style: none;
+}
+
+footer .footer-list li a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .footer-list li a:hover {
+    color: var(--primary);
+}
+
+footer hr {
+    width: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+}
+/* End Footer */
 
 /* Media Query */
 @media screen and (max-width: 768px) {
     main #content article {
         padding: 70px 1rem;
     }
+
+    main #content .about .about-container {
+        flex-wrap: wrap;
+    }
 }
+/* End Media QUery */
+
+/* Navbar Shadow */
+.navbar-shadow {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) !important;
+}
+/* End Navbar Shadow */
