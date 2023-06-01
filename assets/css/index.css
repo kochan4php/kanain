@@ -46,7 +46,8 @@ body {
 
 /* Header */
 header nav {
-    background-color: #fff;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
     width: 100%;
     position: fixed !important;
     top: 0 !important;
@@ -214,14 +215,14 @@ main #content .service .service-container {
 main #content .service .service-container .service-card {
     width: 300px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     align-self: stretch;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
 }
 
@@ -286,7 +287,7 @@ main #content .pricing .pricing-container .pricing-card {
     flex-direction: column;
     align-self: stretch;
     gap: 1.1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
 }
 
@@ -438,7 +439,7 @@ footer .footer-list li {
 footer .footer-list li a {
     color: #fff;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
@@ -454,7 +455,7 @@ footer hr {
 
 footer p {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
 }
 /* End Footer */
@@ -542,11 +543,29 @@ footer p {
         width: 100%;
         text-align: justify;
     }
+
+    footer .footer-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer .footer-list li a {
+        font-size: 1rem;
+    }
+
+    footer hr {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
 }
 /* End Media QUery */
 
 /* Navbar Shadow */
 .navbar-shadow {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 /* End Navbar Shadow */
