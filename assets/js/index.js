@@ -1,30 +1,35 @@
-const navbar = document.querySelector("header nav");
-const navBurger = document.querySelector(".nav-burger i.fas.fa-bars");
-const navList = document.querySelector(".nav-list");
+window.addEventListener("DOMContentLoaded", function () {
+    AOS.init();
 
-let lastScrollTop;
+    const navbar = document.querySelector("header nav");
+    const navBurger = document.querySelector(".nav-burger i.fas.fa-bars");
+    const navList = document.querySelector(".nav-list");
 
-window.onscroll = function () {
-    if (window.pageYOffset > 0) {
-        navbar.classList.add("navbar-shadow");
-    } else {
-        navbar.classList.remove("navbar-shadow");
-    }
+    let lastScrollTop;
 
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    window.onscroll = function () {
+        if (window.pageYOffset > 0) {
+            navbar.classList.add("navbar-shadow");
+        } else {
+            navbar.classList.remove("navbar-shadow");
+        }
 
-    if (scrollTop > lastScrollTop) navbar.style.top = "-100px";
-    else navbar.style.top = "0";
+        const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-    lastScrollTop = scrollTop;
-};
+        if (scrollTop > lastScrollTop) navbar.style.top = "-100px";
+        else navbar.style.top = "0";
 
-navBurger.addEventListener("click", function () {
-    navList.classList.toggle("slide");
-});
+        lastScrollTop = scrollTop;
+    };
 
-window.addEventListener("click", function (e) {
-    if (e.target !== navBurger && e.target !== navList) {
-        navList.classList.remove("slide");
-    }
+    navBurger.addEventListener("click", function () {
+        navList.classList.toggle("slide");
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target !== navBurger && e.target !== navList) {
+            navList.classList.remove("slide");
+        }
+    });
 });
